@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByTheWay - Tu transporte a Loyola</title>
   <link rel="stylesheet" href="styles.css">
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
-    <img src="Logo_ByTheWay_zoom.jpeg" alt="Logo ByTheWay" class="logo">
-    <h1>A la LOYOLA se va en <span class="strikethrough">coche</span> PatoGo</h1>
-    <p>Somos ByTheWay, una App diseñada para hacer tu transporte a Loyola más rápido, económico y seguro. Conectamos a estudiantes para que todos podáis llegar juntos y sin complicaciones. ¡Tu tiempo es valioso, y nosotros nos encargamos del resto!</p>
-    <a href="#subscribe" class="cta-button">Subscríbete para recibir novedades</a>
+    <div id="header-background"></div>
   </header>
+  
+  <section class="header-content-wrapper">
+    <div class="header-content">
+      <img src="Logo_ByTheWay_zoom.jpeg" alt="Logo ByTheWay" class="logo">
+      <h1>A la LOYOLA se va en <span class="strikethrough">coche</span> PatoGo</h1>
+      <p>Somos ByTheWay, una App diseñada para hacer tu transporte a Loyola más rápido, económico y seguro. Conectamos a estudiantes para que todos podáis llegar juntos y sin complicaciones. ¡Tu tiempo es valioso, y nosotros nos encargamos del resto!</p>
+      <a href="#subscribe" class="cta-button">Subscríbete para recibir novedades</a>
+    </div>
+  </section>
+  
 
   <section class="benefits">
     <h2>¿Por qué usar ByTheWay?</h2>
@@ -53,5 +69,8 @@
     </div>
     <p>&copy; 2024 ByTheWay. Todos los derechos reservados.</p>
   </footer>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
+
