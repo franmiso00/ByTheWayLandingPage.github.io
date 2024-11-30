@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByTheWay - Tu transporte a Loyola</title>
   <link rel="stylesheet" href="styles.css">
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "k8NuwzM-Pb5To9hAd",
+        });
+    })();
+  </script>
+  <script src="script.js"></script>
 </head>
+
 <body>
   <header>
     <img src="assets/Logo.jpeg" alt="Logo ByTheWay" class="logo">
@@ -39,10 +52,11 @@
 
   <section class="subscribe" id="subscribe">
     <h2>Subscríbete para recibir novedades</h2>
-    <form>
-      <input type="email" placeholder="Tu correo electrónico" required>
-      <button type="submit">Subscríbete</button>
+    <form id="subscribeForm">
+      <input type="email" id="email" placeholder="Tu correo electrónico" required>
+      <button type="submit" onclick="sendMail()">Subscríbete</button>
     </form>
+    <p id="responseMessage" style="display: none;"></p>
   </section>
 
   <footer>

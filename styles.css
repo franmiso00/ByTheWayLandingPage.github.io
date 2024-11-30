@@ -116,6 +116,11 @@ body {
   button:hover {
     background-color: #333;
   }
+
+  .subscribe #responseMessage {
+    margin-top: 20px;
+    font-weight: bold;
+  }
   
   /* Footer Section */
   footer {
